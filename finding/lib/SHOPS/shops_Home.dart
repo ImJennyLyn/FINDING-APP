@@ -463,6 +463,7 @@ class _SearchPageState extends State<SearchPage> {
         return businessesList
             .where((business) =>
                 business.bname.toLowerCase().contains(keyword.toLowerCase()) ||
+                business.baddress.toLowerCase().contains(keyword.toLowerCase()) ||
                 business.bcategory.toLowerCase().contains(keyword.toLowerCase()))
             .toList(); 
       } else {
